@@ -1,0 +1,14 @@
+
+
+
+  @media (min-width: 768px) {
+    nav {
+      flex-direction: row; 
+      justify-content: center; 
+    }
+  
+    nav ul li {
+      margin-bottom: 0; 
+      margin-right: 15px; 
+    }
+  }
