@@ -22,7 +22,8 @@
   </header>
 
   <nav>
-    <ul>
+    <div class="hamburger" id="hamburger">&#9776;</div> 
+    <ul id="menu" class="hidden"> 
       <li><a href="#">Home</a></li>
       <li><a href="lesson03/chamber-site-plan.html">Site Plan</a></li>
       <li><a href="chamber/">Chamber</a></li>
@@ -30,7 +31,7 @@
       <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/jacob/1?lang=eng" target="_blank">Scripture</a></li>
     </ul>
   </nav>
-
+  
   <main>
     <h2>WDD 230: Web Frontend Development</h2>
 
@@ -47,6 +48,18 @@
     </section>
   </main>
 
+  <section class="map">
+    <h2>Explore Fresno, California</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.898644348999!2d-119.79422348462815!3d36.73714617996133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e2c7074be0f3c9%3A0xa32720dc7d3f7ef8!2sFresno%2C%20CA%2093715%2C%20USA!5e0!3m2!1sen!2sus!4v1696257067476!5m2!1sen!2sus"
+      width="600"
+      height="450"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+    ></iframe>
+  </section>
+  
   <footer>
     <p>&copy; <span id="year"></span> Dillon Sever, California, USA</p>
     <p id="lastModified"></p>

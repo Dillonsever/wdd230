@@ -132,3 +132,48 @@ body {
   nav ul li a:hover {
     text-decoration: underline;
   }
+
+  .hamburger {
+    display: none; 
+    font-size: 2em; 
+    cursor: pointer;
+  }
+
+  @media (max-width: 600px) {
+    nav ul {
+      display: none; 
+      flex-direction: column; 
+      width: 100%; 
+      background-color: #000; 
+    }
+  
+    nav ul.hidden {
+      display: none; 
+    }
+  
+    nav ul.visible {
+      display: flex; 
+    }
+  
+    .hamburger {
+      display: block; 
+    }
+  }
+  
+
+  nav ul li::before {
+    content: '🌐'; 
+    margin-right: 5px; 
+  }
+
+
+.map {
+  display: flex;           
+  justify-content: center; 
+  align-items: center;     
+  margin: 20px 0;        
+}
+
+.map iframe {
+  max-width: 100%;       
+  height: auto;           
