@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif; /* Default font for body text */
+    background-color: #f9f9f9; /* Light background color */
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6; /* Improve readability */
+}
+
+header {
+    background-color: #003366; /* Deep navy blue header background */
+    color: #FFD700; /* Soft gold text color */
+    padding: 10px 20px; /* Padding around header */
+    text-align: center; /* Centered text */
+}
+
+h1 {
+    font-family: Georgia, serif; /* Heading font */
+    font-size: 2.5em; /* Larger font size for the heading */
+}
+
+h2 {
+    font-family: Georgia, serif; /* Heading font for subheadings */
+    color: #003366; /* Deep navy blue color for subheadings */
+    margin-top: 20px; /* Space above subheadings */
+}
+
+section {
+    background: white; /* White background for sections */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px; /* Padding inside sections */
+    margin-bottom: 20px; /* Space between sections */
+}
+
+footer {
+    text-align: center; /* Center footer text */
+    margin-top: 20px; /* Space above footer */
+    color: #777; /* Gray text color */
+}
+
+ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+}
+
+ul li {
+    padding: 5px 0; /* Add spacing between list items */
+}
