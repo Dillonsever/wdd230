@@ -23,3 +23,4 @@ darkModeButton.addEventListener('click', () => {
         localStorage.setItem('theme', 'light'); // Save theme preference
     }
 });
+ 
