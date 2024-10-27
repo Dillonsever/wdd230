@@ -179,3 +179,19 @@ body {
 .map iframe {
   max-width: 100%;       
   height: auto;           
+}
+
+.hero-image {
+  position: relative;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  white-space: nowrap;
+}
