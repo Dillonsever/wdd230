@@ -11,10 +11,16 @@ document.getElementById('hamburger').addEventListener('click', function() {
     if (menu.classList.contains('hidden')) {
       menu.classList.remove('hidden');
       menu.classList.add('visible');
-      this.innerHTML = '✖️'; // Change to X when open
+      this.innerHTML = '✖️'; 
     } else {
       menu.classList.remove('visible');
       menu.classList.add('hidden');
-      this.innerHTML = '&#9776;'; // Change back to hamburger icon
+      this.innerHTML = '&#9776;'; 
     }
   });
+
+const visitCountDisplay = document.getElementById("visitCount");
+let visitCount = Number(localStorage.getItem("pageVisitCount")) || 0;
+visitCount += 1;
+visitCountDisplay.textContent = visitCount;
+localStorage.setItem("pageVisitCount", visitCount);
