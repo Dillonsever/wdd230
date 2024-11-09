@@ -1,55 +1,45 @@
 
-
-/* Remove default margin and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  /* Set default font family and size */
   body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
   }
   
-  /* Normalize text rendering */
   h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     line-height: 1.2;
   }
   
-  /* Remove list styling */
   ul, ol {
     list-style: none;
   }
   
-  /* Normalize table styling */
   table {
     border-collapse: collapse;
     border-spacing: 0;
   }
   
-  /* Normalize links */
   a {
     text-decoration: none;
     color: inherit;
   }
-  
-  /* Ensure images are responsive */
+
   img {
     max-width: 100%;
     height: auto;
   }
   
-  /* Normalize form elements */
   input, select, textarea {
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
   }
   
-  /* Ensure no extra space around iframes */
   iframe {
     border: 0;
   }
