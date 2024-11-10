@@ -23,4 +23,7 @@ darkModeButton.addEventListener('click', () => {
         localStorage.setItem('theme', 'light'); // Save theme preference
     }
 });
-//  This is to push code/
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("timestamp").value = Date.now();
+});

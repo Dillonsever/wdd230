@@ -322,3 +322,30 @@ figcaption {
     font-size: 0.9em;
     color: #555;
 }
+.form-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    gap: 20px;
+    padding: 20px;
+}
+@media (max-width: 768px) {
+    .form-container {
+        grid-template-columns: 1fr; 
+    }
+}
+
+.benefits {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.benefits h3 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.benefits p {
+    font-size: 0.95em;
+    color: #555;
+}
