@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #bebef7;
+    padding: 15px;
+    border: 1px solid #a1a1a1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.25rem;
+    margin: 10px 0;
+    text-align: center;
+}
+
+img {
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    margin: 20px 0;
+    color: #555;
+}
