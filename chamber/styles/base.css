@@ -349,3 +349,42 @@ figcaption {
     font-size: 0.95em;
     color: #555;
 }
+
+#view-toggle {
+    text-align: center;
+    margin: 1rem;
+}
+#view-toggle button {
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+#directory.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+
+#directory.list-view {
+    display: block;
+}
+
+.member-card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+}
+.member-card img {
+    max-width: 100px;
+    height: auto;
+}
+.list-view .member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

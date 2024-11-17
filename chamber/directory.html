@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fresno Chamber of Commerce - Directory of Members">
+    <meta name="author" content="Dillon Sever">
+    <title>Directory - Fresno Chamber of Commerce</title>
+    <link rel="icon" href="images/favicon chamber.webp">
+    <link rel="stylesheet" href="styles/base.css">
+</head>
+<body>
+    <header>
+        <h1>Fresno Chamber of Commerce</h1>
+        <label class="switch">
+            <input type="checkbox" id="darkModeButton">
+            <span class="slider round"></span>
+        </label>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="view-toggle">
+            <button id="grid-view">Grid View</button>
+            <button id="list-view">List View</button>
+        </div>
+        <div id="directory" class="grid-view"></div>
+    </main>
+    <footer>
+        <p>Contact Us: 123 Fresno St, Fresno, CA 93721 | (559) 123-4567</p>
+        <p>Developed by Dillon Sever for WDD 230 - Last modified: <span id="last-modified"></span></p>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

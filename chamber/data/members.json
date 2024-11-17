@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Company 1",
+        "address": "123 Main St, Fresno, CA",
+        "phone": "559-123-4567",
+        "website": "https://companya.com",
+        "image": "1.webp",
+        "membershipLevel": "Gold"
+    },
+    {
+        "name": "Company 2",
+        "address": "456 Oak St, Fresno, CA",
+        "phone": "559-987-6543",
+        "website": "https://companyb.com",
+        "image": "2.webp",
+        "membershipLevel": "Silver"
+    },
+    {
+        "name": "Company 3",
+        "address": "789 Pine St, Fresno, CA",
+        "phone": "559-234-5678",
+        "website": "https://companyc.com",
+        "image": "3.webp",
+        "membershipLevel": "Bronze"
+    },
+    {
+        "name": "Company 4",
+        "address": "101 Maple St, Fresno, CA",
+        "phone": "559-345-6789",
+        "website": "https://companyd.com",
+        "image": "4.jpg",
+        "membershipLevel": "Gold"
+    },
+    {
+        "name": "Company 5",
+        "address": "202 Cedar St, Fresno, CA",
+        "phone": "559-456-7890",
+        "website": "https://companye.com",
+        "image": "5.jpg",
+        "membershipLevel": "Platinum"
+    },
+    {
+        "name": "Company 6",
+        "address": "303 Birch St, Fresno, CA",
+        "phone": "559-567-8901",
+        "website": "https://companyf.com",
+        "image": "6.jpg",
+        "membershipLevel": "Silver"
+    },
+    {
+        "name": "Company 7",
+        "address": "404 Elm St, Fresno, CA",
+        "phone": "559-678-9012",
+        "website": "https://companyg.com",
+        "image": "7.jpg",
+        "membershipLevel": "Bronze"
+    }
+]
