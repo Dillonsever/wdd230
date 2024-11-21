@@ -59,9 +59,13 @@
 
     <section class="card">
       <h3>Information</h3>
-      <p>Placeholder for weather, number of visits, etc.</p>
+      <div id="weatherInfo">
+        <p><strong>Current Temperature:</strong> <span id="currentTemp">Loading...</span></p>
+        <p><strong>Condition:</strong> <span id="currentCondition">Loading...</span></p>
+        <img id="weatherIcon" src="" alt="Weather Icon" style="display: none;">
+      </div>
       <p id="visitCounter">Page Visits: <span id="visitCount">0</span></p>
-   </section>
+    </section>
    
   </main>
 
@@ -83,5 +87,6 @@
   </footer>
 
   <script src="scripts/getdates.js"></script>
+  <script src="scripts/weather.js"></script>
 </body>
 </html>
