@@ -53,7 +53,18 @@
             <p>Become a part of Fresno's thriving business community today!</p>
             <a href="#" class="cta-btn">Join Now</a> 
         </section>
-
+        <div id="meetGreetBanner" style="display: none;">
+            <p>Join us for the Chamber of Commerce Meet and Greet on Wednesday at 7:00 p.m.!</p>
+            <button id="closeBanner" style="
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                background: transparent;
+                border: none;
+                font-size: 1.2rem;
+                cursor: pointer;
+            ">❌</button>
+        </div>        
         <section class="events">
             <h2>Current Events</h2>
             <ul>
@@ -65,11 +76,35 @@
         <section class="weather">
             <h2>Today's Weather</h2>
             <div class="weather-card">
-                <p>Temperature: <span id="temperature">45</span>°F</p>
-                <p>Wind Speed: <span id="wind-speed">10</span> mph</p>
-                <p>Wind Chill: <span id="wind-chill">Calculating...</span></p>
+                <p>Temperature: <span id="currentTemp">--</span></p>
+                <p>Condition: <span id="currentCondition">--</span></p>
+                <img id="weatherIcon" src="" alt="Weather Icon" style="display: none;">
+            </div>
+        
+            <h3>3-Day Forecast</h3>
+            <div class="forecast-container">
+                <div class="forecast-item">
+                    <p class="forecast-date">--</p>
+                    <p class="forecast-temp">--</p>
+                    <p class="forecast-condition">--</p>
+                    <img class="forecast-icon" src="" alt="Forecast Icon" style="display: none;">
+                </div>
+                <div class="forecast-item">
+                    <p class="forecast-date">--</p>
+                    <p class="forecast-temp">--</p>
+                    <p class="forecast-condition">--</p>
+                    <img class="forecast-icon" src="" alt="Forecast Icon" style="display: none;">
+                </div>
+                <div class="forecast-item">
+                    <p class="forecast-date">--</p>
+                    <p class="forecast-temp">--</p>
+                    <p class="forecast-condition">--</p>
+                    <img class="forecast-icon" src="" alt="Forecast Icon" style="display: none;">
+                </div>
             </div>
         </section>
+        
+        
 
         <section class="company-spotlights">
             <h2>Company Spotlights</h2>
@@ -91,6 +126,9 @@
 
     <script src="scripts/script.js"></script>
     <script src="scripts/windchill.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/banner.js"></script>
+
 </body>
 
 </html>
