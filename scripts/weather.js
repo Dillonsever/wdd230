@@ -5,8 +5,11 @@ const country = "US";
 
 async function getWeatherData() {
   try {
-    const geoApiURL = `http://api.openweathermap.org/geo/1.0/direct?q=${city},${state},${country}&limit=1&appid=${apiKey}`;
+
+    const geoApiURL = `https://api.openweathermap.org/geo/1.0/direct?q=${city},${state},${country}&limit=1&appid=${apiKey}`;
+    
     const geoData = await (await fetch(geoApiURL)).json();
+    
     if (!geoData.length) throw new Error("Location not found");
 
     const { lat, lon } = geoData[0];

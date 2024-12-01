@@ -5,13 +5,19 @@ const country = "US";
 
 async function getWeatherData() {
     try {
-        const geoApiURL = `http://api.openweathermap.org/geo/1.0/direct?q=${city},${state},${country}&limit=1&appid=${apiKey}`;
+        // Use HTTPS for both the geo API and the weather forecast API
+        const geoApiURL = `https://api.openweathermap.org/geo/1.0/direct?q=${city},${state},${country}&limit=1&appid=${apiKey}`;
+        
+        // Fetch the geo data for location coordinates
         const geoData = await (await fetch(geoApiURL)).json();
         if (!geoData.length) throw new Error("Location not found");
 
         const { lat, lon } = geoData[0];
 
+        // Use the weather API for the forecast data
         const forecastApiURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
+        
+        // Fetch forecast data
         const forecastData = await (await fetch(forecastApiURL)).json();
 
         const currentWeather = forecastData.list[0];
@@ -22,9 +28,11 @@ async function getWeatherData() {
         weatherIcon.alt = currentWeather.weather[0].description;
         weatherIcon.style.display = "block";
         
+        // Filter for forecast data at 12:00 PM and get the next 3 days
         const forecastDays = document.querySelectorAll(".forecast-item");
         const dailyForecasts = forecastData.list.filter(item => item.dt_txt.includes("12:00:00")).slice(0, 3);
 
+        // Update the forecast information for the next 3 days
         dailyForecasts.forEach((day, index) => {
             const date = new Date(day.dt * 1000).toLocaleDateString("en-US", { weekday: "long" });
             const temp = Math.round(day.main.temp);
