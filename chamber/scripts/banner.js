@@ -6,10 +6,11 @@ function showMeetAndGreetBanner() {
     if (daysToShowBanner.includes(today)) {
         banner.style.display = "block"; 
 
-    const closeBannerButton = document.getElementById("closeBanner");
-    closeBannerButton.addEventListener("click", () => {
-        banner.style.display = "none"; 
-    });
+        const closeBannerButton = document.getElementById("closeBanner");
+        closeBannerButton.addEventListener("click", () => {
+            banner.style.display = "none"; 
+        });
+    } 
 }
 
-showMeetAndGreetBanner();
+showMeetAndGreetBanner(); 

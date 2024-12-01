@@ -13,17 +13,21 @@
 
     <title>Fresno Chamber of Commerce</title>
 
-    <link rel="icon" href="images/favicon chamber.webp" >
+    <link rel="icon" href="images/favicon-chamber.webp">
     <link rel="stylesheet" href="styles/base.css">
 </head>
 
 <body>
     <header>
         <h1>Fresno Chamber of Commerce</h1>
-        <label class="switch">
-            <input type="checkbox" id="darkModeButton">
-            <span class="slider round"></span>
-        </label>
+        <form>
+            <label for="darkModeButton" class="switch">
+                <input type="checkbox" id="darkModeButton" name="darkMode" />
+                <span class="slider"></span>
+            </label>
+        </form>
+        
+        
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -39,13 +43,17 @@
     <main>
         <section class="hero">
             <img 
-                src="images/wdd230-org-small.jpg" 
-                srcset="
-                    images/wdd230-org-small.jpg 600w,
-                    images/wdd230-org-medium.jpg 1000w,
-                    images/wdd230-org-large.jpg 1600w"
+                src="images/wdd230-org-small.webp" 
+                srcset="images/wdd230-org-small.webp 600w,
+                        images/wdd230-org-medium.webp 1000w,
+                        images/wdd230-org-large.webp 1600w"
                 sizes="(max-width: 600px) 600px, (max-width: 1000px) 1000px, 1600px" 
                 alt="Fresno Chamber of Commerce Hero Image with viewport labels">
+        </section>
+
+        <section id="spotlight">
+            <h2>Featured Chamber Members</h2>
+            <div id="spotlight-items"></div>
         </section>
 
         <section class="cta">
@@ -53,18 +61,12 @@
             <p>Become a part of Fresno's thriving business community today!</p>
             <a href="#" class="cta-btn">Join Now</a> 
         </section>
+
         <div id="meetGreetBanner" style="display: none;">
             <p>Join us for the Chamber of Commerce Meet and Greet on Wednesday at 7:00 p.m.!</p>
-            <button id="closeBanner" style="
-                position: absolute;
-                top: 10px;
-                right: 15px;
-                background: transparent;
-                border: none;
-                font-size: 1.2rem;
-                cursor: pointer;
-            ">❌</button>
-        </div>        
+            <button id="closeBanner">❌</button>
+        </div>
+
         <section class="events">
             <h2>Current Events</h2>
             <ul>
@@ -73,6 +75,7 @@
                 <li>Annual Chamber Gala - December 5</li>
             </ul>
         </section>
+
         <section class="weather">
             <h2>Today's Weather</h2>
             <div class="weather-card">
@@ -80,7 +83,6 @@
                 <p>Condition: <span id="currentCondition">--</span></p>
                 <img id="weatherIcon" src="" alt="Weather Icon" style="display: none;">
             </div>
-        
             <h3>3-Day Forecast</h3>
             <div class="forecast-container">
                 <div class="forecast-item">
@@ -103,31 +105,18 @@
                 </div>
             </div>
         </section>
-        
-        
 
-        <section class="company-spotlights">
-            <h2>Company Spotlights</h2>
-            <div class="spotlight">
-                <h3>Business Name 1</h3>
-                <p>Short description of Business 1.</p>
-            </div>
-            <div class="spotlight">
-                <h3>Business Name 2</h3>
-                <p>Short description of Business 2.</p>
-            </div>
-        </section>
     </main>
-
+    
     <footer>
         <p>Contact Us: 123 Fresno St, Fresno, CA 93721 | (559) 123-4567</p>
         <p>Developed by Dillon Sever for WDD 230 - Last modified: <span id="last-modified"></span></p>
     </footer>
 
     <script src="scripts/script.js"></script>
-    <script src="scripts/windchill.js"></script>
     <script src="scripts/weather.js"></script>
     <script src="scripts/banner.js"></script>
+    <script src="scripts/spotlight.js"></script>
 
 </body>
 

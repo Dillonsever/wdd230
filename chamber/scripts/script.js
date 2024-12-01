@@ -1,56 +1,50 @@
-document.getElementById('last-modified').textContent = document.lastModified;
-
-const darkModeButton = document.getElementById('darkModeButton');
-
-const currentTheme = localStorage.getItem('theme');
-
-if (currentTheme === 'dark') {
-    document.body.classList.add('dark-mode');
-    darkModeButton.textContent = 'Switch to Light Mode';
-}
-
-darkModeButton.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    
-    if (document.body.classList.contains('dark-mode')) {
-        darkModeButton.textContent = 'Switch to Light Mode';
-        localStorage.setItem('theme', 'dark'); 
-    } else {
-        darkModeButton.textContent = 'Switch to Dark Mode';
-        localStorage.setItem('theme', 'light'); 
-    }
-});
-
 document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("timestamp").value = Date.now();
-});
+    const darkModePreference = localStorage.getItem("darkMode");
 
-async function fetchMembers(view = 'grid') {
-    try {
-        const response = await fetch('data/members.json');
-        const members = await response.json();
-        renderMembers(members, view);
-    } catch (error) {
-        console.error('Error fetching members:', error);
+    if (darkModePreference === "true") {
+        document.body.classList.add("dark-mode");
+        document.getElementById("darkModeButton").checked = true;
     }
-}
 
-function renderMembers(members, view) {
-    const directory = document.getElementById('directory');
-    directory.className = view === 'grid' ? 'grid-view' : 'list-view';
-    directory.innerHTML = members.map(member => `
-        <div class="member-card">
-            <img src="images/${member.image}" alt="${member.name}">
-            <h2>${member.name}</h2>
-            <p>${member.address}</p>
-            <p>${member.phone}</p>
-            <a href="${member.website}" target="_blank">Visit Website</a>
-            <p>Membership Level: ${member.membershipLevel}</p>
-        </div>
-    `).join('');
-}
+    const darkModeButton = document.getElementById("darkModeButton");
 
-document.getElementById('grid-view').addEventListener('click', () => fetchMembers('grid'));
-document.getElementById('list-view').addEventListener('click', () => fetchMembers('list'));
+    darkModeButton.addEventListener("change", () => {
+        if (darkModeButton.checked) {
+            document.body.classList.add("dark-mode");
+            localStorage.setItem("darkMode", "true"); 
+        } else {
 
-fetchMembers('grid');
+            document.body.classList.remove("dark-mode");
+            localStorage.setItem("darkMode", "false"); 
+        }
+    });
+
+
+    fetch('data/members.json')
+        .then(response => response.json())
+        .then(members => {
+            const filteredMembers = members.filter(member => member.membershipLevel === "Gold" || member.membershipLevel === "Silver");
+
+            const randomMembers = [];
+            while (randomMembers.length < 3 && filteredMembers.length > 0) {
+                const randomIndex = Math.floor(Math.random() * filteredMembers.length);
+                randomMembers.push(filteredMembers.splice(randomIndex, 1)[0]);
+            }
+
+            const spotlightItems = document.getElementById("spotlight-items");
+
+            randomMembers.forEach(member => {
+                const spotlightItem = document.createElement("div");
+                spotlightItem.classList.add("spotlight");
+                spotlightItem.innerHTML = `
+                    <h3>${member.name}</h3>
+                    <img src="images/${member.image}" alt="${member.name}" class="spotlight-img">
+                    <p><strong>Address:</strong> ${member.address}</p>
+                    <p><strong>Phone:</strong> ${member.phone}</p>
+                    <p><a href="${member.website}" target="_blank">Visit Website</a></p>
+                `;
+                spotlightItems.appendChild(spotlightItem);
+            });
+        })
+        .catch(error => console.error('Error loading the members data:', error));
+});
