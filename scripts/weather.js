@@ -5,7 +5,7 @@ const country = "US";
 
 async function getWeatherData() {
   try {
-
+    // Use HTTPS and CORS proxy if necessary
     const geoApiURL = `https://api.openweathermap.org/geo/1.0/direct?q=${city},${state},${country}&limit=1&appid=${apiKey}`;
     
     const geoData = await (await fetch(geoApiURL)).json();
@@ -16,7 +16,8 @@ async function getWeatherData() {
     const weatherApiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
     const weatherData = await (await fetch(weatherApiURL)).json();
 
-    document.getElementById("currentTemp").textContent = `${weatherData.main.temp}°F`;
+    // Updating HTML elements with weather data
+    document.getElementById("currentTemp").textContent = `${Math.round(weatherData.main.temp)}°F`;
     document.getElementById("currentCondition").textContent = weatherData.weather[0].description;
     document.getElementById("weatherIcon").src = `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`;
     document.getElementById("weatherIcon").style.display = "block";
