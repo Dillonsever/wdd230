@@ -1,0 +1,135 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-around;
+  background: #005f73;
+  color: black;
+  padding: 1em;
+}
+
+h1 {
+  color: black;
+}
+
+.heroimage {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  display: block;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  color: white;
+  text-align: center;
+  padding: 5em 1em;
+}
+
+.ctabutton {
+  background-color: #028090;
+  color: white;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.weatherinfo, .rentalsummary {
+  margin: 2em;
+}
+
+.rentalgrid {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+footer {
+  text-align: center;
+  background: #005f73;
+  color: white;
+  padding: 1em 0;
+}
+
+
+@media (max-width: 1024px) {
+  .hero {
+      padding: 3em 1em;
+  }
+
+  .rentalgrid {
+      flex-direction: column; 
+  }
+
+  .heroimage {
+      width: 100%; 
+      height: auto;
+  }
+
+  header nav {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  header nav a {
+      margin: 0.5em 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+      padding: 2em 1em;
+  }
+
+  h1 {
+      font-size: 1.5rem; 
+  }
+
+  .ctabutton {
+      padding: 0.8em 1.6em;
+      font-size: 1rem;
+  }
+
+  .weatherinfo, .rentalsummary {
+      margin: 1em; 
+  }
+
+  .rentalgrid {
+      flex-direction: column; 
+      gap: 1em; 
+  }
+
+  .heroimage {
+      width: 100%; 
+      height: auto;
+  }
+}
+
+@media (max-width: 375px) {
+  h1 {
+      font-size: 1.2rem; 
+  }
+
+  .ctabutton {
+      padding: 0.6em 1.2em;
+      font-size: 0.9rem;
+  }
+  
+  .hero {
+      padding: 1.5em 1em; 
+  }
+
+  .weatherinfo, .rentalsummary {
+      margin: 0.5em; 
+  }
+}

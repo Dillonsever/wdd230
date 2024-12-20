@@ -1,0 +1,11 @@
+{
+    "rentals": [
+      { "type": "Honda Metropolitan", "capacity": "1", "halfDay": 20, "fullDay": 30 },
+      { "type": "Honda Dio", "capacity": "2", "halfDay": 30, "fullDay": 40 },
+      { "type": "Honda PCX150", "capacity": "2", "halfDay": 40, "fullDay": 50 },
+      { "type": "Honda Pioneer ATV", "capacity": "4", "halfDay": 50, "fullDay": 70 },
+      { "type": "Jeep Wrangler 4-door", "capacity": "5", "halfDay": 70, "fullDay": 100 },
+      { "type": "Jeep Wrangler 2-door", "capacity": "4", "halfDay": 60, "fullDay": 85 }
+    ]
+  }
+  
